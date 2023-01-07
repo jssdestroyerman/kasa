@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import database from "../database.json";
 
 function HomeCard() {
@@ -8,7 +7,7 @@ function HomeCard() {
         <div className="card-container">
             {data.map((logement) => {
                 return (
-                    <div className="card">
+                    <div key={logement.id} className="card">
                         <img src={logement.pictures[0]} alt="" />
                         <p>{logement.title}</p>
                     </div>

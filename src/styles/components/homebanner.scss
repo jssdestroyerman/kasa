@@ -1,4 +1,4 @@
-.banner {
+.homeBanner {
     width: 100%;
     height: 223px;
     display: flex;
@@ -8,8 +8,8 @@
     position: relative;
 
     img {
-        mix-blend-mode: darken;
         border-radius: 15px;
+        mix-blend-mode: darken;
     }
 
     p {

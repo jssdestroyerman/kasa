@@ -1,0 +1,31 @@
+.footer {
+    height: 210px;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    color: white;
+
+    h3 {
+        display: flex;
+        align-items: center;
+        height: 35px;
+        font-size: 45px;
+        letter-spacing: 1px;
+
+        img {
+            position: relative;
+            top: 4px;
+            margin-right: 2px;
+        }
+    }
+
+    p {
+        font-size: 24px;
+    }
+}

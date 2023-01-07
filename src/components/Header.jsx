@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
+import homeLogo from "../assets/homeLogoSalmon.svg";
 
 function Header() {
     return (
         <div className="header">
             <h1>
                 K
-                <img src={require("../assets/homeLogo.png")} alt="logo kasa" />
+                <img src={homeLogo} alt="logo kasa" />
                 sa
             </h1>
 
