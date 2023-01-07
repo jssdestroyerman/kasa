@@ -20,7 +20,10 @@ a {
 }
 
 @import "./components/header.scss";
-@import "./components/homebanner.scss";
+@import "./pages/home/home.scss";
 @import "./components/homecard.scss";
 @import "./components/footer.scss";
-@import "./components/error.scss";
+@import "./pages/about/aboutbanner.scss";
+@import "./components/aboutcollapse.scss";
+
+@import "./pages/error/error.scss";
