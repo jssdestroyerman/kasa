@@ -13,9 +13,13 @@ function AboutList({ name, content }) {
                     }}
                 >
                     {name}
-                    <img className={!isHidden && "open"} src={arrow} alt="" />
+                    <img
+                        className={!isHidden && "arrowOpen"}
+                        src={arrow}
+                        alt="Arrow"
+                    />
                 </h2>
-                {!isHidden && <p>{content}</p>}
+                <p className={!isHidden && "contentOpen"}>{content}</p>
             </li>
         </>
     );
