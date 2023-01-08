@@ -1,15 +1,19 @@
-function AboutList({ name, content, elementTarget, setElementTarget }) {
+import { useState } from "react";
+
+function AboutList({ name, content }) {
+    const [isHidden, setIsHidden] = useState(true);
+
     return (
         <>
             <li>
                 <h2
-                    onClick={(e) => {
-                        setElementTarget(e.target.textContent);
+                    onClick={() => {
+                        setIsHidden(!isHidden);
                     }}
                 >
                     {name}
                 </h2>
-                {elementTarget === name && <p>{content}</p>}
+                {!isHidden && <p>{content}</p>}
             </li>
         </>
     );

@@ -32,8 +32,6 @@ const aboutData = [
 ];
 
 function About() {
-    const [elementTarget, setElementTarget] = useState("");
-
     return (
         <>
             <Header />
@@ -47,8 +45,6 @@ function About() {
                             name={data.name}
                             content={data.content}
                             key={data.id}
-                            elementTarget={elementTarget}
-                            setElementTarget={setElementTarget}
                         />
                     );
                 })}
