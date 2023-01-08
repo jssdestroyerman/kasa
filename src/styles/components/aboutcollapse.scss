@@ -17,11 +17,14 @@ ul {
             margin-top: 30px;
             cursor: pointer;
 
-            &::after {
+            img {
                 content: url("../../assets/arrow.svg");
                 position: relative;
                 right: 20px;
                 top: 3px;
+            }
+            .open {
+                transform: rotate(180deg);
             }
         }
     }
@@ -31,5 +34,6 @@ ul {
         background-color: #f6f6f6;
         color: $primary-color;
         padding: 30px 15px 15px 15px;
+        transition: 500ms;
     }
 }

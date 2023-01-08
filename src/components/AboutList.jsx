@@ -1,4 +1,5 @@
 import { useState } from "react";
+import arrow from "../assets/arrow.svg";
 
 function AboutList({ name, content }) {
     const [isHidden, setIsHidden] = useState(true);
@@ -12,6 +13,7 @@ function AboutList({ name, content }) {
                     }}
                 >
                     {name}
+                    <img className={!isHidden && "open"} src={arrow} alt="" />
                 </h2>
                 {!isHidden && <p>{content}</p>}
             </li>
