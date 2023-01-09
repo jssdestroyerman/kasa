@@ -14,17 +14,13 @@ function Housing() {
 
     function increaseImage() {
         let index = data.pictures.indexOf(image);
-        if (index < data.pictures.length - 1) {
-            index++;
-        }
+        index++;
         setImage(data.pictures[index]);
     }
 
     function decreaseImage() {
         let index = data.pictures.indexOf(image);
-        if (index > 0) {
-            index--;
-        }
+        index--;
         setImage(data.pictures[index]);
     }
 
@@ -33,7 +29,11 @@ function Housing() {
             <Header />
             <div className="housingBanner">
                 <img
-                    className="leftArrow"
+                    className={
+                        data.pictures.indexOf(image) === 0
+                            ? "none"
+                            : "leftArrow"
+                    }
                     src={arrow}
                     alt="arrow"
                     onClick={() => {
@@ -42,7 +42,11 @@ function Housing() {
                 />
                 <img className="contentImage" src={image} alt={data.picture} />
                 <img
-                    className="rightArrow"
+                    className={
+                        data.pictures.indexOf(image) > data.pictures.length - 2
+                            ? "none"
+                            : "rightArrow"
+                    }
                     src={arrow}
                     alt="arrow"
                     onClick={() => {
