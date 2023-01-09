@@ -1,9 +1,36 @@
 .housingBanner {
     position: relative;
-    img {
-        height: 415px;
+    height: 415px;
+    display: flex;
+    align-items: center;
+    .contentImage {
+        height: 100%;
         width: 100%;
         object-fit: cover;
         border-radius: 15px;
+    }
+
+    .leftArrow {
+        position: absolute;
+        left: 20px;
+        width: 80px;
+        height: 45px;
+        transform: rotate(90deg);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .rightArrow {
+        position: absolute;
+        right: 20px;
+        width: 80px;
+        height: 45px;
+        transform: rotate(-90deg);
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
