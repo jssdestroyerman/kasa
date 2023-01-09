@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import AboutList from "../components/AboutList";
+import Collapse from "../components/Collapse";
 import aboutBanner from "../assets/aboutBanner.jpg";
 
 const aboutData = [
@@ -40,7 +40,7 @@ function About() {
             <ul>
                 {aboutData.map((data) => {
                     return (
-                        <AboutList
+                        <Collapse
                             name={data.name}
                             content={data.content}
                             key={data.id}

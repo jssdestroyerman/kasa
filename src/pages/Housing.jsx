@@ -54,6 +54,22 @@ function Housing() {
                     }}
                 />
             </div>
+
+            <div className="information">
+                <div className="left">
+                    <h1>{data.title}</h1>
+                    <p>{data.location}</p>
+                    <ul>
+                        {data.tags.map((tag, index) => (
+                            <li key={index}>{tag}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="right">
+                    <p>{data.host.name}</p>
+                    <img src={data.host.picture} alt="propriétaire" />
+                </div>
+            </div>
         </>
     );
 }
