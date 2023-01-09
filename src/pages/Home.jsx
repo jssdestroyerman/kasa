@@ -1,7 +1,8 @@
 import Header from "../components/Header";
-import HomeCard from "../components/HomeCard";
 import Footer from "../components/Footer";
 import homeBanner from "../assets/homeBanner.jpg";
+import database from "../database.json";
+import { NavLink } from "react-router-dom";
 
 function Home() {
     return (
@@ -11,7 +12,20 @@ function Home() {
                 <img src={homeBanner} alt="bannière" />
                 <p>Chez vous, partout et ailleurs</p>
             </div>
-            <HomeCard />
+            <div className="card-container">
+                {database.map((logement) => {
+                    return (
+                        <NavLink
+                            key={logement.id}
+                            className="card"
+                            to={`/logement/?id=${logement.id}`}
+                        >
+                            <img src={logement.pictures[0]} alt="" />
+                            <p>{logement.title}</p>
+                        </NavLink>
+                    );
+                })}
+            </div>
             <Footer />
         </>
     );
