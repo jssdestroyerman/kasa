@@ -1,5 +1,6 @@
 import database from "../database.json";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { useState } from "react";
 import arrow from "../assets/arrow.svg";
 
@@ -55,7 +56,7 @@ function Housing() {
                 />
             </div>
 
-            <div className="information">
+            <div className="informations">
                 <div className="left">
                     <h1>{data.title}</h1>
                     <p>{data.location}</p>
@@ -68,8 +69,11 @@ function Housing() {
                 <div className="right">
                     <p>{data.host.name}</p>
                     <img src={data.host.picture} alt="propriétaire" />
+                    <div className="rating">Stars here!</div>
                 </div>
             </div>
+
+            <Footer />
         </>
     );
 }
