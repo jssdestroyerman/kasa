@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import database from "../database.json";
 
 function HomeCard() {
@@ -7,10 +8,14 @@ function HomeCard() {
         <div className="card-container">
             {data.map((logement) => {
                 return (
-                    <div key={logement.id} className="card">
+                    <NavLink
+                        key={logement.id}
+                        className="card"
+                        to={`/logement/?id=${logement.id}`}
+                    >
                         <img src={logement.pictures[0]} alt="" />
                         <p>{logement.title}</p>
-                    </div>
+                    </NavLink>
                 );
             })}
         </div>
