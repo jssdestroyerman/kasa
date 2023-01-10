@@ -1,6 +1,7 @@
 import database from "../database.json";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Collapse from "../components/Collapse";
 import { useState } from "react";
 import arrow from "../assets/arrow.svg";
 
@@ -24,6 +25,10 @@ function Housing() {
         index--;
         setImage(data.pictures[index]);
     }
+
+    const equipements = data.equipments.map((equipement, index) => {
+        return <li key={index}>{equipement}</li>;
+    });
 
     return (
         <>
@@ -67,9 +72,19 @@ function Housing() {
                     </ul>
                 </div>
                 <div className="right">
-                    <p>{data.host.name}</p>
-                    <img src={data.host.picture} alt="propriétaire" />
+                    <div className="hostInformations">
+                        <p>{data.host.name}</p>
+                        <img src={data.host.picture} alt="propriétaire" />
+                    </div>
                     <div className="rating">Stars here!</div>
+                </div>
+            </div>
+            <div className="housingCollapse">
+                <div className="collapse">
+                    <Collapse name={"Description"} content={data.description} />
+                </div>
+                <div className="collapse">
+                    <Collapse name={"Équipements"} content={equipements} />
                 </div>
             </div>
 

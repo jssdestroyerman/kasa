@@ -6,7 +6,7 @@ function AboutList({ name, content }) {
 
     return (
         <>
-            <li>
+            <div className="block">
                 <h2
                     onClick={() => {
                         setIsHidden(!isHidden);
@@ -20,7 +20,7 @@ function AboutList({ name, content }) {
                     />
                 </h2>
                 <p className={!isHidden ? "contentOpen" : ""}>{content}</p>
-            </li>
+            </div>
         </>
     );
 }

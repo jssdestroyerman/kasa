@@ -41,6 +41,9 @@
 
 .informations {
     color: $primary-color;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
 
     h1 {
         font-size: 36px;
@@ -48,11 +51,49 @@
 
     p {
         font-size: 18px;
+        margin-top: 8px;
     }
 
     img {
         border-radius: 50%;
         width: 64px;
         height: 64px;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        margin-top: 20px;
+
+        li {
+            font-size: 14px;
+            background-color: $primary-color;
+            color: white;
+            padding: 5px 40px;
+            border-radius: 15px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.hostInformations {
+    display: flex;
+    text-align: center;
+
+    p {
+        width: 100px;
+        text-align: right;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+}
+
+.housingCollapse {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+
+    .collapse {
+        width: 582px;
     }
 }
