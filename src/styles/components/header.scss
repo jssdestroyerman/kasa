@@ -30,6 +30,13 @@
 
     li {
         position: relative;
+        &:hover {
+            color: darken($primary-color, 10%);
+            &::after {
+                transform: scaleX(1);
+                background-color: darken($primary-color, 10%);
+            }
+        }
     }
 
     .navIsActive li::before {
@@ -53,11 +60,5 @@
         transition: 1s;
         transform: scaleX(0);
         transform-origin: left;
-    }
-
-    li:hover {
-        &::after {
-            transform: scaleX(1);
-        }
     }
 }

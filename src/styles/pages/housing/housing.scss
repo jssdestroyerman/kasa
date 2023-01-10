@@ -97,3 +97,12 @@
         width: 582px;
     }
 }
+
+.housingBanner {
+    svg:hover {
+        path {
+            fill: rgb(233, 233, 233);
+            transform: scale(0.98);
+        }
+    }
+}

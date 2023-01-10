@@ -16,15 +16,21 @@
             position: relative;
             color: white;
             cursor: pointer;
+
             img {
                 position: relative;
                 right: 20px;
                 top: 3px;
                 transition: 500ms;
             }
+
             .arrowOpen {
                 transform: rotate(-180deg);
                 transition: 500ms;
+            }
+
+            &:hover {
+                background-color: darken($primary-color, 5%);
             }
         }
     }

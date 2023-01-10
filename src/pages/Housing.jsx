@@ -3,7 +3,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
 import { useState } from "react";
-import arrow from "../assets/arrow.svg";
 
 function Housing() {
     let url = new URL(window.location.href);
@@ -34,31 +33,48 @@ function Housing() {
         <>
             <Header />
             <div className="housingBanner">
-                <img
+                <svg
                     className={
                         data.pictures.indexOf(image) === 0
                             ? "none"
                             : "leftArrow"
                     }
-                    src={arrow}
-                    alt="arrow"
                     onClick={() => {
                         decreaseImage();
                     }}
-                />
+                    width="28"
+                    height="28"
+                    viewBox="0 0 25 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2.6635 0.859489L0.530579 3.00462L12.4605 14.9233L24.3904 2.99257L22.2575 0.859489L12.4605 10.6572L2.6635 0.859489Z"
+                        fill="white"
+                    />
+                </svg>
                 <img className="contentImage" src={image} alt={data.picture} />
-                <img
+                <svg
                     className={
-                        data.pictures.indexOf(image) > data.pictures.length - 2
+                        data.pictures.indexOf(image) ===
+                        data.pictures.length - 1
                             ? "none"
                             : "rightArrow"
                     }
-                    src={arrow}
-                    alt="arrow"
                     onClick={() => {
                         increaseImage();
                     }}
-                />
+                    width="28"
+                    height="28"
+                    viewBox="0 0 25 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2.6635 0.859489L0.530579 3.00462L12.4605 14.9233L24.3904 2.99257L22.2575 0.859489L12.4605 10.6572L2.6635 0.859489Z"
+                        fill="white"
+                    />
+                </svg>
             </div>
 
             <div className="informations">
@@ -76,7 +92,20 @@ function Housing() {
                         <p>{data.host.name}</p>
                         <img src={data.host.picture} alt="propriétaire" />
                     </div>
-                    <div className="rating">Stars here!</div>
+                    <div className="rating">
+                        <svg
+                            width="30"
+                            height="30"
+                            viewBox="0 0 30 30"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M18.645 12L15 0L11.355 12H0L9.27 18.615L5.745 30L15 22.965L24.27 30L20.745 18.615L30 12H18.645Z"
+                                fill="#E3E3E3"
+                            />
+                        </svg>
+                    </div>
                 </div>
             </div>
             <div className="housingCollapse">
