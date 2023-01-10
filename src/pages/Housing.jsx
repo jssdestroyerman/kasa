@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
 import { useState } from "react";
 import Star from "../components/Star";
+import Arrow from "../components/Arrow";
 
 function Housing() {
     let url = new URL(window.location.href);
@@ -30,52 +31,25 @@ function Housing() {
         return <li key={index}>{equipement}</li>;
     });
 
+    const rightArrowCond = data.pictures.indexOf(image) === 0;
+    const leftArrowCond =
+        data.pictures.indexOf(image) === data.pictures.length - 1;
+
     return (
         <>
             <Header />
             <div className="housingBanner">
-                <svg
-                    className={
-                        data.pictures.indexOf(image) === 0
-                            ? "none"
-                            : "leftArrow"
-                    }
-                    onClick={() => {
-                        decreaseImage();
-                    }}
-                    width="28"
-                    height="28"
-                    viewBox="0 0 25 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M2.6635 0.859489L0.530579 3.00462L12.4605 14.9233L24.3904 2.99257L22.2575 0.859489L12.4605 10.6572L2.6635 0.859489Z"
-                        fill="white"
-                    />
-                </svg>
+                <Arrow
+                    indexOf={rightArrowCond}
+                    decreaseImage={decreaseImage}
+                    theClassName={"leftArrow"}
+                />
                 <img className="contentImage" src={image} alt={data.picture} />
-                <svg
-                    className={
-                        data.pictures.indexOf(image) ===
-                        data.pictures.length - 1
-                            ? "none"
-                            : "rightArrow"
-                    }
-                    onClick={() => {
-                        increaseImage();
-                    }}
-                    width="28"
-                    height="28"
-                    viewBox="0 0 25 15"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M2.6635 0.859489L0.530579 3.00462L12.4605 14.9233L24.3904 2.99257L22.2575 0.859489L12.4605 10.6572L2.6635 0.859489Z"
-                        fill="white"
-                    />
-                </svg>
+                <Arrow
+                    indexOf={leftArrowCond}
+                    decreaseImage={increaseImage}
+                    theClassName={"rightArrow"}
+                />
             </div>
 
             <div className="informations">
