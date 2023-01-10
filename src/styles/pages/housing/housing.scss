@@ -108,5 +108,11 @@
 }
 
 .rating {
+    position: relative;
     margin-top: 26px;
+    height: 30px;
+    .filledStars {
+        position: absolute;
+        top: 0;
+    }
 }
