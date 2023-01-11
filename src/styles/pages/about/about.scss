@@ -1,0 +1,43 @@
+.aboutBanner {
+    img {
+        border-radius: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .aboutBanner {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .aboutBanner {
+        img {
+            image-orientation: flip;
+            height: 220px;
+        }
+    }
+
+    .aboutCollapse {
+        .collapse {
+            .block {
+                h2 {
+                    font-size: 13px;
+                    height: 30px;
+                    border-radius: 5px;
+                }
+
+                svg {
+                    width: 20px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
