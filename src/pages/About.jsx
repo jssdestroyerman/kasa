@@ -37,16 +37,18 @@ function About() {
             <div className="aboutBanner">
                 <img src={aboutBanner} alt="bannière montagne" />
             </div>
-            <div className="collapse">
-                {aboutData.map((data) => {
-                    return (
-                        <Collapse
-                            name={data.name}
-                            content={data.content}
-                            key={data.id}
-                        />
-                    );
-                })}
+            <div className="aboutCollapse">
+                <div className="collapse">
+                    {aboutData.map((data) => {
+                        return (
+                            <Collapse
+                                name={data.name}
+                                content={data.content}
+                                key={data.id}
+                            />
+                        );
+                    })}
+                </div>
             </div>
             <Footer />
         </>
