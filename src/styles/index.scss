@@ -26,5 +26,10 @@ a {
 @import "./pages/about/aboutbanner.scss";
 @import "./components/collapse.scss";
 @import "./pages/housing/housing.scss";
-
 @import "./pages/error/error.scss";
+
+@media (max-width: 1300px) {
+    body {
+        width: 90%;
+    }
+}

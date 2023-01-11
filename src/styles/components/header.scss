@@ -21,6 +21,8 @@
     }
 
     ul {
+        position: relative;
+        top: 5px;
         display: flex;
         list-style-type: none;
         font-size: 24px;
@@ -60,5 +62,48 @@
         transition: 1s;
         transform: scaleX(0);
         transform-origin: left;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        h1 {
+            font-size: 60px;
+
+            img {
+                height: 45px;
+                width: 35px;
+            }
+        }
+        ul {
+            width: 195px;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        margin: 10px auto;
+        h1 {
+            font-size: 55px;
+            img {
+                height: 35px;
+                width: 30px;
+                margin-right: 4px;
+            }
+        }
+        ul {
+            width: 140px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .navIsActive li::before {
+            height: 1px;
+        }
+        .navIsActive li::after {
+            height: 1px;
+        }
     }
 }

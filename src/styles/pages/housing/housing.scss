@@ -70,7 +70,7 @@
             background-color: $primary-color;
             color: white;
             padding: 5px 40px;
-            border-radius: 15px;
+            border-radius: 10px;
             margin-right: 10px;
         }
     }
@@ -114,5 +114,168 @@
     .filledStars {
         position: absolute;
         top: 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    .informations {
+        h1 {
+            font-size: 28px;
+        }
+    }
+
+    .housingCollapse {
+        .collapse {
+            width: 47%;
+
+            p {
+                font-size: 20px;
+            }
+        }
+        h2 {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .housingBanner {
+        .rightArrow,
+        .leftArrow {
+            width: 60px;
+        }
+    }
+
+    .informations {
+        flex-direction: column;
+
+        .right {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            margin-top: 15px;
+
+            .rating svg {
+                height: 25px;
+            }
+        }
+    }
+
+    .housingCollapse {
+        flex-direction: column;
+
+        .collapse {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .housingBanner {
+        height: 300px;
+    }
+
+    .informations {
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 15px;
+        }
+
+        ul {
+            flex-wrap: wrap;
+            li {
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                padding: 5px 15px;
+            }
+        }
+
+        .right {
+            .rating {
+                svg {
+                    height: 15px;
+                }
+            }
+
+            .hostInformations {
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    .housingCollapse {
+        h2 {
+            font-size: 16px;
+        }
+        .collapse {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .housingBanner {
+        .housingBanner {
+            height: 250;
+        }
+
+        .rightArrow,
+        .leftArrow {
+            width: 25px;
+        }
+    }
+
+    .informations {
+        h1 {
+            font-size: 18px;
+        }
+        .left {
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .right {
+            .rating {
+                margin-top: 0;
+            }
+            margin-top: 15px;
+            .hostInformations {
+                p {
+                    width: 80px;
+                    font-size: 12px;
+                    margin-top: 0;
+                }
+
+                img {
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .housingCollapse {
+        .collapse {
+            h2 {
+                font-size: 13px;
+                height: 30px;
+                border-radius: 5px;
+            }
+
+            svg {
+                width: 20px;
+            }
+        }
     }
 }
