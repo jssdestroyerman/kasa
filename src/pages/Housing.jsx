@@ -28,10 +28,6 @@ function Housing() {
         setImage(data.pictures[index]);
     }
 
-    const equipements = data.equipments.map((equipement, index) => {
-        return <li key={index}>{equipement}</li>;
-    });
-
     const rightArrowCond = data.pictures.indexOf(image) === 0;
     const leftArrowCond =
         data.pictures.indexOf(image) === data.pictures.length - 1;
@@ -78,7 +74,12 @@ function Housing() {
                     <Collapse name={"Description"} content={data.description} />
                 </div>
                 <div className="collapse">
-                    <Collapse name={"Équipements"} content={equipements} />
+                    <Collapse
+                        name={"Équipements"}
+                        content={data.equipments.map((equipement, index) => {
+                            return <li key={index}>{equipement}</li>;
+                        })}
+                    />
                 </div>
             </div>
 
