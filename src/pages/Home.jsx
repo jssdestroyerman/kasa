@@ -18,7 +18,7 @@ function Home() {
                         <NavLink
                             key={logement.id}
                             className="card"
-                            to={`/logement/?id=${logement.id}`}
+                            to={`/logement?id=${logement.id}`}
                         >
                             <img src={logement.pictures[0]} alt="" />
                             <p>{logement.title}</p>
