@@ -5,20 +5,14 @@ import Collapse from "../components/Collapse";
 import { useState } from "react";
 import Star from "../components/Star";
 import Arrow from "../components/Arrow";
-import { redirect } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function Housing() {
-    let url = new URL(window.location.href);
-    let pageId = url.searchParams.get("id");
-    const data = database.find((element) => element.id === pageId);
-    console.log(data);
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search).get("id");
+    const data = database.find((element) => element.id === searchParams);
 
-    function idError() {
-        if (data === undefined) {
-            redirect("/*");
-        }
-    }
-    idError();
+    console.log(searchParams);
 
     const [image, setImage] = useState(data.pictures[0]);
 
