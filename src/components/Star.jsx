@@ -4,10 +4,11 @@ function Star({ rating }) {
     return (
         <>
             <div className="emptyStars">
-                {stars.map((star) => {
+                {stars.map((star, index) => {
                     return (
                         star <= 5 && (
                             <svg
+                                key={index}
                                 width="30"
                                 height="30"
                                 viewBox="0 0 30 30"
@@ -23,10 +24,11 @@ function Star({ rating }) {
                     );
                 })}
                 <div className="filledStars">
-                    {stars.map((star) => {
+                    {stars.map((star, index) => {
                         return (
                             star < rating && (
                                 <svg
+                                    key={index}
                                     width="30"
                                     height="30"
                                     viewBox="0 0 30 30"
