@@ -2,13 +2,13 @@ import database from "../database.json";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Star from "../components/Star";
 import Arrow from "../components/Arrow";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Housing() {
-    const {id} = useParams()
+    const { id } = useParams();
     const data = database.find((element) => element.id === id);
     const [image, setImage] = useState(data.pictures[0]);
 
