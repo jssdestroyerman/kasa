@@ -149,11 +149,18 @@
     .informations {
         flex-direction: column;
 
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+            }
+        }
         .right {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
-            margin-top: 15px;
+            align-items: center;
+            margin-top: 5px;
 
             .rating svg {
                 height: 25px;
@@ -188,8 +195,6 @@
             flex-wrap: wrap;
             li {
                 font-size: 10px;
-                display: flex;
-                align-items: center;
                 margin-bottom: 5px;
                 padding: 5px 15px;
             }
