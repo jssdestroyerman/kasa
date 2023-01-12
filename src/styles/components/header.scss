@@ -51,7 +51,7 @@
         left: 0;
     }
 
-    li:after {
+    li::after {
         content: "";
         height: 2px;
         background-color: $primary-color;
@@ -102,7 +102,7 @@
         .navIsActive li::before {
             height: 1px;
         }
-        .navIsActive li::after {
+        li::after {
             height: 1px;
         }
     }
