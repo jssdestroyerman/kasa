@@ -53,11 +53,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         padding: 6px 10px;
-    }
-}
 
-@media (max-width: 1250px) {
-    .card-container {
         .card {
             width: 45%;
         }
