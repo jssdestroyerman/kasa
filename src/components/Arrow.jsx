@@ -1,9 +1,9 @@
-function Arrow({ indexOf, decreaseImage, theClassName }) {
+function Arrow({ action, theClassName }) {
     return (
         <svg
-            className={indexOf ? "none" : theClassName}
+            className={theClassName}
             onClick={() => {
-                decreaseImage();
+                action();
             }}
             width="28"
             height="28"

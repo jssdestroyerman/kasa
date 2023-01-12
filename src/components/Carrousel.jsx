@@ -3,36 +3,33 @@ import { useState } from "react";
 
 function Carrousel({ data }) {
     const [image, setImage] = useState(data.pictures[0]);
+    let index = data.pictures.indexOf(image);
 
     function increaseImage() {
-        let index = data.pictures.indexOf(image);
-        index++;
-        setImage(data.pictures[index]);
+        if (index === data.pictures.length - 1) {
+            index = 0;
+            setImage(data.pictures[index]);
+        } else {
+            index++;
+            setImage(data.pictures[index]);
+        }
     }
 
     function decreaseImage() {
-        let index = data.pictures.indexOf(image);
-        index--;
-        setImage(data.pictures[index]);
+        if (index === 0) {
+            index = data.pictures.length - 1;
+            setImage(data.pictures[index]);
+        } else {
+            index--;
+            setImage(data.pictures[index]);
+        }
     }
-
-    const rightArrowCond = data.pictures.indexOf(image) === 0;
-    const leftArrowCond =
-        data.pictures.indexOf(image) === data.pictures.length - 1;
 
     return (
         <div className="housingCarrousel">
-            <Arrow
-                indexOf={rightArrowCond}
-                decreaseImage={decreaseImage}
-                theClassName={"leftArrow"}
-            />
+            <Arrow action={decreaseImage} theClassName={"leftArrow"} />
             <img className="contentImage" src={image} alt={data.picture} />
-            <Arrow
-                indexOf={leftArrowCond}
-                decreaseImage={increaseImage}
-                theClassName={"rightArrow"}
-            />
+            <Arrow action={increaseImage} theClassName={"rightArrow"} />
         </div>
     );
 }
