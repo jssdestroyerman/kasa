@@ -3,6 +3,20 @@
     height: 223px;
     border-radius: 25px;
     margin-bottom: 31px;
+
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        background-color: black;
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
 }
 
 @media (max-width: 800px) {

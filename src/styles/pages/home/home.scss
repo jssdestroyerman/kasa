@@ -6,10 +6,24 @@
     align-items: center;
     border-radius: 25px;
     background: url("../../../assets/homeBanner.jpg") center/cover;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        background-color: black;
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
 
     p {
         font-size: 48px;
         color: white;
+        z-index: 1;
     }
 }
 
