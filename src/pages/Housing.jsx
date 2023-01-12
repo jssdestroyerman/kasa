@@ -2,48 +2,24 @@ import database from "../database.json";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
-import { useState } from "react";
 import Star from "../components/Star";
-import Arrow from "../components/Arrow";
-import { useParams } from "react-router-dom";
+import { redirect, useParams } from "react-router-dom";
+import Carrousel from "../components/Carrousel";
+import { useEffect } from "react";
 
 function Housing() {
     const { id } = useParams();
     const data = database.find((element) => element.id === id);
-    const [image, setImage] = useState(data.pictures[0]);
 
-    function increaseImage() {
-        let index = data.pictures.indexOf(image);
-        index++;
-        setImage(data.pictures[index]);
+    if (!data) {
+        console.log("abc");
     }
-
-    function decreaseImage() {
-        let index = data.pictures.indexOf(image);
-        index--;
-        setImage(data.pictures[index]);
-    }
-
-    const rightArrowCond = data.pictures.indexOf(image) === 0;
-    const leftArrowCond =
-        data.pictures.indexOf(image) === data.pictures.length - 1;
 
     return (
         <>
             <Header />
-            <div className="housingBanner">
-                <Arrow
-                    indexOf={rightArrowCond}
-                    decreaseImage={decreaseImage}
-                    theClassName={"leftArrow"}
-                />
-                <img className="contentImage" src={image} alt={data.picture} />
-                <Arrow
-                    indexOf={leftArrowCond}
-                    decreaseImage={increaseImage}
-                    theClassName={"rightArrow"}
-                />
-            </div>
+            <Carrousel data={data} />
+
             <div className="informations">
                 <div className="left">
                     <h1>{data.title}</h1>
