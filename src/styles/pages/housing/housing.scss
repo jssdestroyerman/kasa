@@ -94,6 +94,10 @@
     margin-top: 25px;
 
     .collapse {
+        h2,
+        p {
+            font-size: 18px;
+        }
         width: 582px;
     }
 }
@@ -128,8 +132,9 @@
         .collapse {
             width: 47%;
 
+            h2,
             p {
-                font-size: 20px;
+                font-size: 16px;
             }
         }
         h2 {
@@ -212,17 +217,6 @@
                     width: 50px;
                     height: 50px;
                 }
-            }
-        }
-    }
-
-    .housingCollapse {
-        h2 {
-            font-size: 16px;
-        }
-        .collapse {
-            p {
-                font-size: 16px;
             }
         }
     }
