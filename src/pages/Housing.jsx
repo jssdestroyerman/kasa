@@ -2,15 +2,14 @@ import database from "../database.json";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Star from "../components/Star";
 import Arrow from "../components/Arrow";
-import { useLocation } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 function Housing() {
-    const location = useLocation();
-    const searchParams = new URLSearchParams(location.search).get("id");
-    const data = database.find((element) => element.id === searchParams);
+    const {id} = useParams()
+    const data = database.find((element) => element.id === id);
     const [image, setImage] = useState(data.pictures[0]);
 
     function increaseImage() {
