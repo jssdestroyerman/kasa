@@ -6,8 +6,6 @@ import { useState } from "react";
 import Star from "../components/Star";
 import Arrow from "../components/Arrow";
 import { useLocation } from "react-router-dom";
-import { redirect } from "react-router-dom";
-import Error from "../pages/Error";
 
 function Housing() {
     const location = useLocation();
