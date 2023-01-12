@@ -13,6 +13,23 @@
     }
 }
 
+@media (max-width: 800px) {
+    .aboutCollapse {
+        .collapse {
+            .block {
+                h2 {
+                    font-size: 18px;
+                    border-radius: 5px;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 375px) {
     .aboutBanner {
         img {
