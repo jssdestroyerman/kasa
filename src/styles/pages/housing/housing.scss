@@ -1,4 +1,4 @@
-.housingBanner {
+.housingCarrousel {
     position: relative;
     height: 415px;
     display: flex;
@@ -102,7 +102,7 @@
     }
 }
 
-.housingBanner {
+.housingCarrousel {
     svg:hover {
         path {
             fill: rgb(233, 233, 233);
@@ -144,7 +144,7 @@
 }
 
 @media (max-width: 800px) {
-    .housingBanner {
+    .housingCarrousel {
         .rightArrow,
         .leftArrow {
             width: 60px;
@@ -184,7 +184,7 @@
 }
 
 @media (max-width: 600px) {
-    .housingBanner {
+    .housingCarrousel {
         height: 300px;
     }
 
@@ -223,11 +223,7 @@
 }
 
 @media (max-width: 375px) {
-    .housingBanner {
-        .housingBanner {
-            height: 250;
-        }
-
+    .housingCarrousel {
         .rightArrow,
         .leftArrow {
             width: 25px;
