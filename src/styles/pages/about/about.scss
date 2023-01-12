@@ -1,16 +1,8 @@
 .aboutBanner {
-    img {
-        border-radius: 25px;
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 1300px) {
-    .aboutBanner {
-        img {
-            width: 100%;
-        }
-    }
+    background: url("../../../assets/aboutBanner.jpg") center/cover;
+    height: 223px;
+    border-radius: 25px;
+    margin-bottom: 31px;
 }
 
 @media (max-width: 800px) {
@@ -32,10 +24,8 @@
 
 @media (max-width: 375px) {
     .aboutBanner {
-        img {
-            image-orientation: flip;
-            height: 220px;
-        }
+        background: url("../../../assets/responsiveAboutBanner.jpg")
+            center/cover;
     }
 
     .aboutCollapse {

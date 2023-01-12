@@ -1,7 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
-import aboutBanner from "../assets/aboutBanner.jpg";
 
 const aboutData = [
     {
@@ -34,9 +33,7 @@ function About() {
     return (
         <>
             <Header />
-            <div className="aboutBanner">
-                <img src={aboutBanner} alt="bannière montagne" />
-            </div>
+            <div className="aboutBanner"></div>
             <div className="aboutCollapse">
                 <div className="collapse">
                     {aboutData.map((data) => {
