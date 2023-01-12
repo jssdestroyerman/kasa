@@ -6,14 +6,13 @@ import { useState } from "react";
 import Star from "../components/Star";
 import Arrow from "../components/Arrow";
 import { useLocation } from "react-router-dom";
+import { redirect } from "react-router-dom";
+import Error from "../pages/Error";
 
 function Housing() {
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search).get("id");
     const data = database.find((element) => element.id === searchParams);
-
-    console.log(searchParams);
-
     const [image, setImage] = useState(data.pictures[0]);
 
     function increaseImage() {
@@ -48,7 +47,6 @@ function Housing() {
                     theClassName={"rightArrow"}
                 />
             </div>
-
             <div className="informations">
                 <div className="left">
                     <h1>{data.title}</h1>
@@ -82,7 +80,6 @@ function Housing() {
                     />
                 </div>
             </div>
-
             <Footer />
         </>
     );
