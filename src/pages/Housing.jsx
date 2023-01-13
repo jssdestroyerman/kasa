@@ -3,22 +3,27 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
 import Star from "../components/Star";
-import { Navigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Carrousel from "../components/Carrousel";
+import { useEffect } from "react";
 
 function Housing() {
     const { id } = useParams();
     const data = database.find((element) => element.id === id);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!data) {
+            navigate("*");
+        }
+    });
 
     return (
         <>
-            {!data ? (
-                <Navigate to="*" replace={true} />
-            ) : (
+            {data && (
                 <>
                     <Header />
                     <Carrousel data={data} />
-
                     <div className="informations">
                         <div className="left">
                             <h1>{data.title}</h1>
