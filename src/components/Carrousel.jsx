@@ -34,6 +34,9 @@ function Carrousel({ data }) {
                 </>
             ) : null}
             <img className="contentImage" src={image} alt={data.picture} />
+            <span>
+                {index + 1}/{data.pictures.length}
+            </span>
         </div>
     );
 }

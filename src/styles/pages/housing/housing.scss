@@ -3,11 +3,19 @@
     height: 415px;
     display: flex;
     align-items: center;
+    justify-content: center;
     .contentImage {
         height: 100%;
         width: 100%;
         object-fit: cover;
         border-radius: 25px;
+    }
+
+    span {
+        position: absolute;
+        bottom: 25px;
+        font-size: 18px;
+        color: white;
     }
 
     .leftArrow {
@@ -227,6 +235,9 @@
         .rightArrow,
         .leftArrow {
             width: 25px;
+        }
+        span {
+            display: none;
         }
     }
 
