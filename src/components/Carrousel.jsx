@@ -27,9 +27,13 @@ function Carrousel({ data }) {
 
     return (
         <div className="housingCarrousel">
-            <Arrow action={decreaseImage} theClassName={"leftArrow"} />
+            {data.pictures.length > 1 ? (
+                <>
+                    <Arrow action={decreaseImage} theClassName={"leftArrow"} />
+                    <Arrow action={increaseImage} theClassName={"rightArrow"} />
+                </>
+            ) : null}
             <img className="contentImage" src={image} alt={data.picture} />
-            <Arrow action={increaseImage} theClassName={"rightArrow"} />
         </div>
     );
 }
