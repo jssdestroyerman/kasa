@@ -189,6 +189,10 @@
             margin: 0;
         }
     }
+
+    .rating .filledStars {
+        display: flex;
+    }
 }
 
 @media (max-width: 600px) {
