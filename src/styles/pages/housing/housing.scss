@@ -134,6 +134,14 @@
         h1 {
             font-size: 28px;
         }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                margin-bottom: 5px;
+            }
+        }
     }
 
     .housingCollapse {
