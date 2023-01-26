@@ -192,10 +192,6 @@
 
     .rating .filledStars {
         display: flex;
-        svg {
-            width: 15px;
-            margin: 5px;
-        }
     }
 }
 
@@ -222,12 +218,6 @@
         }
 
         .right {
-            .rating {
-                svg {
-                    height: 15px;
-                }
-            }
-
             .hostInformations {
                 img {
                     width: 50px;
@@ -263,6 +253,11 @@
         .right {
             .rating {
                 margin-top: 0;
+                .filledStars {
+                    svg {
+                        width: 15px;
+                    }
+                }
             }
             margin-top: 15px;
             .hostInformations {
