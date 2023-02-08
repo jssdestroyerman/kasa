@@ -1,3 +1,7 @@
+# kasa
+
+This is the front end for Project 7 of the Web Developer path of OpenClassRooms.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
